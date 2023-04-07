@@ -87,7 +87,7 @@ const handleSubmit = async (e) => {
   // fetch data from server ->  bot's response
 
   try {
-    const responce  = await fetch("http://localhost:5000",{
+    const responce  = await fetch("https://codemon-chatgpt-clone-bxrh.onrender.com/",{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
