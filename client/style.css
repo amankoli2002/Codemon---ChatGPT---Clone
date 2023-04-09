@@ -135,8 +135,25 @@ textarea {
   border-radius: 5px;
   border: none;
   outline: none;
+
 }
 
+.btn{
+  color: yellow;
+  background-color: rgb(40, 0, 54);
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px;
+  border-radius: 8%;
+}
+
+.btn:hover{
+  background-color: rgb(29, 0, 41);
+}
+
+.btn:active{
+  background-color: rgb(20, 0, 28);
+}
 button {
   outline: 0;
   border: 0;
@@ -147,4 +164,8 @@ button {
 form img {
   width: 30px;
   height: 30px;
+}
+
+.hidden{
+  visibility: hidden;
 }

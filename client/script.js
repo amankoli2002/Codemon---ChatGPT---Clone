@@ -3,6 +3,7 @@ import user from './assets/User.png'
 
 const form = document.querySelector('form')
 const chatContainer = document.querySelector("#chat_container")
+const stopResponce = document.querySelector(".btn")
 
 
 let loadInterval
@@ -11,7 +12,7 @@ let loadInterval
 // Loading while fetching the content
 function loader(element){
   element.textContent = ""
-
+  stopResponce.classList.remove("hidden")
   loadInterval = setInterval(()=>{
     element.textContent += "."
 
@@ -32,9 +33,14 @@ function typeText(element , text){
       element.innerHTML += text.charAt(index)
       index++
     } else {
+      stopResponce.classList.add("hidden")
       clearInterval(interval)
     }
-  },50)
+    stopResponce.addEventListener("click" , () => {
+      stopResponce.classList.add("hidden")
+      clearInterval(interval)
+    })
+  },30)
 }
 
 function generateUniqueId() {
@@ -125,3 +131,6 @@ form.addEventListener("keyup", (e) => {
     handleSubmit(e) 
   }
 })
+
+
+
